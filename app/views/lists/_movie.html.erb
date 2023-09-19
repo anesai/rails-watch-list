@@ -1,0 +1,17 @@
+<div id="<%= dom_id movie %>">
+  <div class="movie-card-content">
+    <h4><%= movie.title %></h4>
+    </div>
+    <p>
+      <%= movie.overview %>
+    </p>
+  </div>
+    <div class="movie-card-actions link-container">
+      <%= link_to "Delete",
+        movie_path(movie),
+        method: :delete,
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+        class: "remove-link"
+      %>
+  </div>
+</div>
